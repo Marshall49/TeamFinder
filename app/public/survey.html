@@ -148,24 +148,23 @@
     <br>
     <br>
 
-    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
      Submit</button>
 
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Team List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+        <p><a href="/api/Team">API Team List</a> | <a href="https://github.com/Marshall49/TeamFinder">GitHub Repo</a></p>
       </div>
     </footer>
 
   </div>
 
-  <!-- Modal -->
+
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -184,27 +183,6 @@
   </div>
 
   <script type="text/javascript">
-    // Chosen CSS
-    // var config = {
-    //   ".chosen-select": {},
-    //   ".chosen-select-deselect": {
-    //     allow_single_deselect: true
-    //   },
-    //   ".chosen-select-no-single": {
-    //     disable_search_threshold: 10
-    //   },
-    //   ".chosen-select-no-results": {
-    //     no_results_text: "Oops, nothing found!"
-    //   },
-    //   ".chosen-select-width": {
-    //     width: "95%"
-    //   }
-    // };
-    //
-    // for (var selector in config) {
-    //   $(selector).chosen(config[selector]);
-    // }
-
 
     $("#submit").on("click", function(event) {
       event.preventDefault();
@@ -217,18 +195,6 @@
             isValid = false;
           }
         });
-
-        $(".chosen-select").each(function() {
-
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-        return isValid;
-      }
-
-
-      if (validateForm()) {
 
         var userData = {
           name: $("#name").val(),

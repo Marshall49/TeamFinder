@@ -15,11 +15,8 @@ module.exports = function(app) {
     var userData = req.body;
     var userScores = userData.scores;
 
-    var totalDifference;
-
     for (var i = 0; i < teams.length; i++) {
       var currentTeam = teams[i];
-      totalDifference = 0;
 
       console.log(currentTeam.name);
 
@@ -27,16 +24,6 @@ module.exports = function(app) {
         var currentTeamScore = currentTeam.scores[j];
         var currentUserScore = userScores[j];
 
-        totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentTeamScore));
-      }
-
-      if (totalDifference <= bestMatch.friendDifference) {
-
-        bestMatch.name = currentTeam.name;
-        bestMatch.photo = currentTeam.photo;
-        bestMatch.TeamDifference = totalDifference;
-      }
-    }
 
 
     Team.push(userData);
